@@ -27,10 +27,11 @@ function App() {
     formData.append("mode", mode);
 
     try {
-      const response = await fetch("http://localhost:8000/process", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch("https://lucidlens-backend-1.onrender.com/process", {
+      method: "POST",
+      body: formData,
+    });
+
 
       const data = await response.json();
 
